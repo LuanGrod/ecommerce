@@ -14,10 +14,16 @@ export default function MainNav({
 
   const routes = [
     {
+      href: `/${params.storeId}`,
+      labels: "Início",
+      active: pathname === `/${params.storeId}`
+    },
+    {
       href: `/${params.storeId}/settings`,
       labels: "Configuração",
       active: pathname === `/${params.storeId}/settings`
     }
+    
   ];
 
   return (
