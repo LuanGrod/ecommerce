@@ -1,0 +1,5 @@
+Clerk
+PlanetScale
+Lucide
+Cloudinary
+shadcn.ui
