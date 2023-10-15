@@ -72,9 +72,9 @@ export default function BillboardForm({ initialData }: BillboardFormProps) {
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/${params.storeId}/billboards/${params.bindingId}`);
+      await axios.delete(`/api/${params.storeId}/billboards/${params.billboardId}`);
       router.refresh();
-      router.push("/");
+      router.push(`/${params.storeId}/billboards`);
       toast.success("Quadro de avisos apagado com sucesso!");
     } catch (error) {
       toast.error("Lembre de apagar todas as categorias usando esse quadro de avisos.")
@@ -134,7 +134,7 @@ export default function BillboardForm({ initialData }: BillboardFormProps) {
               </FormItem>
             )}
           />
-          <div className="grid grid-cols-3gap-8">
+          <div className="grid grid-cols-3 gap-8">
             <FormField
               control={form.control}
               name={"label"}
@@ -154,7 +154,6 @@ export default function BillboardForm({ initialData }: BillboardFormProps) {
           </Button>
         </form>
       </Form>
-      <Separator />
     </>
   );
 }

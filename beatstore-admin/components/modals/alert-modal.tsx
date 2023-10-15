@@ -25,7 +25,7 @@ export default function AlertModal({ isOpen, loading, onClose, onConfirm }: Aler
   return (
     <Modal
       title="Tem certeza?"
-      description="Essa ação não pode ser desfeitação"
+      description="Essa ação não pode ser desfeita"
       isOpen={isOpen}
       onClose={onClose}
     >
